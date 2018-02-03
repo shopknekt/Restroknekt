@@ -1,0 +1,11 @@
+<%= form_for @shop_admin, :url => { :action => "new" } do |f| %>
+
+<div class="field">
+    <%= f.label :theme_name %><br>
+    <%= f.collection_select :theme_id, @theme, :id, :theme_name, include_blank: true  %>
+  </div>
+  <%= f.submit 'Submit' %>
+<% end %>
+
+
+
